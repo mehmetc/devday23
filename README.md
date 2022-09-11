@@ -54,7 +54,7 @@ All static view specific css, html, img and js files
 Is used to configure and setup the environment
 ```json
   "primo": {
-    "url": "https://oxford.primo.exlibrisgroup.com",     #base url of primo
+    "url": "https://test.primo.exlibrisgroup.com",       #base url of primo
     "institution": "11INST",                             #institution id
     "vidId": "VIEW",                                     #view id to use with `yarn start`
     "build": {                                           #list of views to build
@@ -127,7 +127,7 @@ export let dotTestComponent = {
 }
 ```
 
-- name: name of the component. Use 'oxf-' prefix to namespace the components
+- name: name of the component. 
 - config: see [AngularJS](https://docs.angularjs.org/guide/component)
 - enabled: if component enabled in configuration
 - appendTo: a __before__ or __after__ hook to attach your component. If value is NULL then the component can be used anywhere like for example the home page.
