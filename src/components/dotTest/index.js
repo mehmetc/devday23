@@ -1,6 +1,7 @@
 class DotTestController {
     constructor($ocLazyLoad, $injector) {
         console.log('constructor');
+        addEventListener('pnxBaseURLEvent', (event) => { document.querySelector('dot-test').classList.toggle('busy')})
     }
 }
 
