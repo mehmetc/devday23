@@ -1,4 +1,4 @@
-# Oxford PrimoVE development
+# PrimoVE development
 
 [Yarn](https://yarnpkg.com/) is prefered as package manager. But any will do.
 
@@ -7,7 +7,7 @@
 .
 ├── README.md                       This file
 ├── dist                            Your build folder
-│   └── 44OXF_INST-SOLO
+│   └── 11INST-VIEW
 │       └── js
 │           ├── custom.js
 │           └── custom.js.map
@@ -15,7 +15,7 @@
 ├── package                         Alma ready. Packaged build
 ├── package.json                    Environment configuration
 ├── resources                       Resources
-│   ├── 44OXF_INST-SOLO             Institution and ViewID specific files
+│   ├── 11INST-VIEW                 Institution and ViewID specific files
 │   │   ├── img
 │   │   ├── html
 │   │   └── js
@@ -27,6 +27,9 @@
 │   ├── components                  Component definitions
 │   │   └── dotTest
 │   │       └── index.js
+│   ├── modules                     Module definitions
+│   │   ├── interceptors
+│   │   └── pubSubInterceptor.js
 │   ├── sass                        Style sheets
 │   │   ├── base
 │   │   ├── layout
@@ -42,9 +45,9 @@
 All static **non** view specific html, img and js files  
 CSS files are not stored here since SASS is used to generate them.  
 If you need to reference an html file from another html file the base path = '/discovery'.  
-for example: ```./custom/44OXF_INST-SOLO/hello.html``` or ```/discovery/custom/44OXF_INST-SOLO/world.html```
+for example: ```./custom/11INST-VIEW/hello.html``` or ```/discovery/custom/11INST-VIEW /world.html```
 
-### [INSTITUTION-VIEWID] like 44OXF_INST-SOLO
+### [INSTITUTION-VIEWID] like 11INST-VIEW 
 All static view specific css, html, img and js files
 
 ## package.json
@@ -52,11 +55,11 @@ Is used to configure and setup the environment
 ```json
   "primo": {
     "url": "https://oxford.primo.exlibrisgroup.com",     #base url of primo
-    "institution": "44OXF_INST",                         #institution id
-    "vidId": "SOLO",                                     #view id to use with `yarn start`
+    "institution": "11INST",                             #institution id
+    "vidId": "VIEW",                                     #view id to use with `yarn start`
     "build": {                                           #list of views to build
       "views": [
-        "SOLO"
+        "VIEW"
       ],
       "dist": "./dist",                                  #build folder
       "resources": "./resources",                        #resource folder
@@ -171,4 +174,9 @@ pubSub.listBeforeTopics
 ### List of after-topics
 ```javascript
 pubSub.listAfterTopics
+```
+
+### List all events
+```javascript
+pubSub.listEvents
 ```
