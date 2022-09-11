@@ -1,0 +1,5 @@
+node_modules
+dist
+package/*.zip
+no_git
+.DS_Store

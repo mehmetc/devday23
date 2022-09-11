@@ -1,0 +1,13 @@
+dot-test {
+    position:fixed;
+    right: 0;
+    top: 0;
+    opacity:0.5;
+    z-index: 100000;
+    font-size: 10em;
+    color: yellow;
+}
+
+.busy {
+    color: red;
+}

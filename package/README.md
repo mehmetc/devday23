@@ -1,0 +1,1 @@
+Directory contains zip file ready to upload to Alma.
