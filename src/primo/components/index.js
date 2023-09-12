@@ -9,7 +9,7 @@ export default class Component {
         let components = [];
         for (let tag of tags) {
             let tagName = tag.localName;
-            if (/^prm-|primo-|test/.test(tagName)) {
+            if (/^prm-|primo-|solo-/.test(tagName)) {
                 let component = { name: tagName, obj: angular.element(tag) };
                 components.push(component);
             }
@@ -18,6 +18,7 @@ export default class Component {
     }
 
     /**
+     * Get component as an element
      * 
      * @param {string} componentName - name of the component 
      * @returns component element
@@ -32,6 +33,7 @@ export default class Component {
     }
 
     /**
+     * Get scope of component
      * 
      * @param {string} componentName - name of the component
      * @returns scope of component
@@ -41,6 +43,7 @@ export default class Component {
     }
 
     /**
+     * Get controller of component
      * 
      * @param {string} componentName - name of the component
      * @returns controller of component
@@ -55,6 +58,9 @@ export default class Component {
     }
 
     /**
+     * Get a component by name. 
+     * Difference with .element(componentName)
+     *      This method returns a DOM the latter an angular.element object
      * 
      * @param {string} componentName - name of the component
      * @returns component
