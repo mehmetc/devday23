@@ -7,14 +7,34 @@ import Session from '../session';
  * Helper class to access record currently in full view
  */
 class CurrentRecord {
+    constructor () {
+        this._id = 0;
+    }
+
+    static set id(i) {
+        if (i > Common.userSession.searchStateService.resultObject.data.length) {
+            i = Common.userSession.searchStateService.resultObject.data.length;
+        }
+        if (i < 0){
+            i=0;
+        }
+        
+        this._id = i;
+    }
+
+    static get id() {
+        return this._id || 0;
+    }
+
     static get record() {
         try {
             if (Common.isFullViewOverlay()) {
                 return Common.components.controller('prm-full-view')[0].item;
             } else if (Common.isFullView()){
                 return Common.components.controller('prm-full-view-page')[0].currentItem;
-            } else {
-                Common.userSession.searchStateService.resultObject.data[0];
+            } else {                
+                //return Common.userSession.searchStateService.resultObject.data[0];
+                return Common.userSession.searchStateService.resultObject.data[this.id];
             }
             return null;
         } catch (e) {

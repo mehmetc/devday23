@@ -1,10 +1,8 @@
 class DotTestController {
-    constructor($ocLazyLoad, $injector) {
+    constructor() {
         console.log('constructor');
     }
 }
-
-DotTestController.$inject = ['$ocLazyLoad','$injector']
 
 export let dotTestComponent = {
     name: 'dot-test',
