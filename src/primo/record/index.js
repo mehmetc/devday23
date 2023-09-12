@@ -14,7 +14,7 @@ class CurrentRecord {
             } else if (Common.isFullView()){
                 return Common.components.controller('prm-full-view-page')[0].currentItem;
             } else {
-                Common.userSession.searchStateService.resultObject.data[0];
+                return Common.userSession.searchStateService.resultObject.data[0];
             }
             return null;
         } catch (e) {
