@@ -11,3 +11,7 @@ dot-test {
 .busy {
     color: red;
 }
+.performance {
+    font-size: 5em;
+    top: 0.8em;
+}
