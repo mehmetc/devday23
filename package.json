@@ -54,6 +54,6 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "primo-explore-hathitrust-availability": "^2.7.0"
+    "sync-fetch": "^0.3.1"
   }
 }
