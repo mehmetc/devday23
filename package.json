@@ -1,6 +1,6 @@
 {
-  "name": "igelu22-devday",
-  "description": "IGELU22 DevDay demo",
+  "name": "igelu23-devday",
+  "description": "IGeLU23 DevDay demo",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   "primo": {
     "url": "https://kuleuven.limo.libis.be",
     "institution": "32KUL_KUL",
-    "vidId": "KULeuven",
+    "vidId": "Lirias",
     "build": {
       "views": [
         "KULeuven"
